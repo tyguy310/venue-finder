@@ -20,6 +20,28 @@ const H1 = styled.h1`
   text-align: center;
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  padding: 2rem;
+  border: 2px solid #520e6f;
+  margin: 0 2rem;
+  border-radius: 4px;
+  color: #fff;
+  background-color: rgba(82,14,111,0.3);
+  transition: .3s;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: rgba(82,14,111,0.5);
+  }
+`;
+
+const Buttons = styled.ul`
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+`;
+
 export default class HomePage extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
@@ -27,10 +49,12 @@ export default class HomePage extends React.Component { // eslint-disable-line r
         <H1>
           <FormattedMessage {...messages.header} />
         </H1>
-        <div>
-          <Link to="/FoodVenues">Food</Link>
-          <Link to="/DrinkVenues">Drink</Link>
-        </div>
+        <Buttons>
+          <StyledLink to="/HappyHour">Happy Hour</StyledLink>
+          <StyledLink to="/LateNight">Late Night</StyledLink>
+          <StyledLink to="/DailySpecials">Daily Specials</StyledLink>
+          <StyledLink to="/Brunch">Brunch</StyledLink>
+        </Buttons>
       </div>
     );
   }

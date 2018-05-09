@@ -16,8 +16,8 @@ import { Switch, Route } from 'react-router-dom';
 import WebFont from 'webfontloader';
 
 import HomePage from 'containers/HomePage/Loadable';
-import FoodVenues from 'components/FoodVenues/Loadable';
-import DrinkVenues from 'components/DrinkVenues/Loadable';
+import EventTypeShow from 'containers/EventTypeShow/Loadable';
+
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import SideBar from 'components/SideBar';
 
@@ -33,8 +33,7 @@ export default function App() {
       <main id="page-wrap" >
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/FoodVenues" component={FoodVenues} />
-          <Route path="/DrinkVenues" component={DrinkVenues} />
+          <Route path="/:eventtype" component={EventTypeShow} />
           <Route component={NotFoundPage} />
         </Switch>
       </main>

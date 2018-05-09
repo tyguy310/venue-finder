@@ -1,9 +1,9 @@
 // import React from 'react';
 // import { shallow } from 'enzyme';
 
-// import FoodVenues from '../index';
+// import { EventTypeShow } from '../index';
 
-describe('<FoodVenues />', () => {
+describe('<EventTypeShow />', () => {
   it('Expect to have unit tests specified', () => {
     expect(true).toEqual(false);
   });

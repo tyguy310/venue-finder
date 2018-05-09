@@ -7,7 +7,7 @@
 import React from 'react';
 import { push as Menu } from 'react-burger-menu';
 import { NavLink } from 'react-router-dom';
-// import styled from 'styled-components';
+import styled from 'styled-components';
 
 const styles = {
   bmBurgerButton: {
@@ -44,6 +44,13 @@ const styles = {
   },
 };
 
+const StyledNavLink = styled(NavLink)`
+  color: #bb8600;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+`;
+
 class SideBar extends React.Component { // eslint-disable-line react/prefer-stateless-function
   showSettings(event) {
     event.preventDefault();
@@ -52,9 +59,7 @@ class SideBar extends React.Component { // eslint-disable-line react/prefer-stat
   render() {
     return (
       <Menu pageWrapId={'page-wrap'} outerContainerId={'outer-container'} styles={styles}>
-        <NavLink id="home" className="menu-item" to="/">Home</NavLink>
-        <NavLink id="foodvenues" className="menu-item" to="/FoodVenues">Hungry</NavLink>
-        <NavLink id="drinkvenues" className="menu-item" to="/DrinkVenues">Thirsty</NavLink>
+        <StyledNavLink id="home" className="menu-item" to="/">Home</StyledNavLink>
       </Menu>
     );
   }

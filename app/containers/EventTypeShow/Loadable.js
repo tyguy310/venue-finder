@@ -1,6 +1,6 @@
 /**
  *
- * Asynchronously loads the component for FoodVenues
+ * Asynchronously loads the component for EventTypeShow
  *
  */
 
