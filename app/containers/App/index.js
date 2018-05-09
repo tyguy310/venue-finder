@@ -13,17 +13,31 @@
 
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import WebFont from 'webfontloader';
 
 import HomePage from 'containers/HomePage/Loadable';
+import FoodVenues from 'components/FoodVenues/Loadable';
+import DrinkVenues from 'components/DrinkVenues/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import SideBar from 'components/SideBar';
 
 export default function App() {
+  WebFont.load({
+    google: {
+      families: ['Nunito', 'Fontdiner Swanky', 'sans-serif'],
+    },
+  });
   return (
-    <div>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route component={NotFoundPage} />
-      </Switch>
+    <div id="outer-container">
+      <SideBar />
+      <main id="page-wrap" >
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/FoodVenues" component={FoodVenues} />
+          <Route path="/DrinkVenues" component={DrinkVenues} />
+          <Route component={NotFoundPage} />
+        </Switch>
+      </main>
     </div>
   );
 }

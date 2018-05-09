@@ -9,7 +9,7 @@ injectGlobal`
   }
 
   body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Nunito', Helvetica, Arial, sans-serif;
   }
 
   body.fontLoaded {
@@ -20,6 +20,10 @@ injectGlobal`
     background-color: #fafafa;
     min-height: 100%;
     min-width: 100%;
+  }
+
+  #page-wrap {
+    padding: 2% 8%;
   }
 
   p,
